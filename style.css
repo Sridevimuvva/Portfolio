@@ -70,7 +70,7 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Animation for sections */
+/* Smooth Fade Animation */
 @keyframes fadeInUp {
     from {
         transform: translateY(20px);
@@ -82,7 +82,7 @@ a:hover {
     }
 }
 
-/* Card Hover Animation for Work Experience */
+/* Card Hover Animation */
 .card {
     background: #f9f9f9;
     margin: 20px auto;
@@ -97,4 +97,16 @@ a:hover {
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
     background: #ffffff;
     cursor: pointer;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    section {
+        width: 90%;
+        padding: 30px;
+    }
+
+    .card {
+        width: 90%;
+    }
 }
