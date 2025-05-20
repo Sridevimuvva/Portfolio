@@ -42,6 +42,7 @@ section {
 
 h2 {
     color: #2c3e50;
+    text-align: center;
 }
 
 footer {
@@ -70,7 +71,7 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Smooth Fade Animation */
+/* Animation for section appearance */
 @keyframes fadeInUp {
     from {
         transform: translateY(20px);
@@ -82,31 +83,45 @@ a:hover {
     }
 }
 
-/* Card Hover Animation */
-.card {
+/* Work experience and certification cards */
+.card, .cert-card {
     background: #f9f9f9;
     margin: 20px auto;
     padding: 20px;
     border-radius: 10px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     width: 80%;
+    text-align: left;
 }
 
-.card:hover {
+.card:hover, .cert-card:hover {
     transform: translateY(-5px);
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
     background: #ffffff;
     cursor: pointer;
 }
 
-/* Responsive Design */
+/* Badge styling */
+.cert-card img {
+    display: block;
+    max-width: 140px;
+    margin: 0 auto 15px auto;
+}
+
+/* Responsive for mobile */
 @media screen and (max-width: 768px) {
     section {
-        width: 90%;
+        width: 95%;
         padding: 30px;
     }
 
-    .card {
-        width: 90%;
+    .card, .cert-card {
+        width: 95%;
+    }
+
+    header a {
+        display: block;
+        margin: 10px auto;
+        width: fit-content;
     }
 }
