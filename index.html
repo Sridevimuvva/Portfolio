@@ -5,111 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Sri Devi Muvva — Portfolio</title>
   <meta name="description" content="Portfolio site for Sri Devi Muvva — Software Engineer" />
+  <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    :root{
-      --bg: #0b0f14;
-      --card: #0f141b;
-      --muted: #96a0aa;
-      --text: #e9eef5;
-      --accent: #62a0ff;
-      --accent-2: #4ade80;
-      --ring: rgba(98,160,255,.35);
-      --shadow: 0 10px 30px rgba(0,0,0,.35);
-    }
-    *{box-sizing:border-box}
-    html,body{margin:0}
-    body{
-      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
-      background: radial-gradient(1200px 600px at 10% -10%, rgba(98,160,255,.08), transparent 60%),
-                  radial-gradient(1000px 500px at 100% 10%, rgba(74,222,128,.08), transparent 50%),
-                  var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-    }
-    a{color:var(--accent);text-decoration:none}
-    a:hover{text-decoration:underline}
-    .container{max-width:1100px;margin:0 auto;padding:24px}
-
-    /* Header / Hero */
-    header{
-      position: sticky; top: 0; z-index: 20; backdrop-filter: saturate(1.2) blur(8px);
-      background: linear-gradient(180deg, rgba(11,15,20,.85), rgba(11,15,20,.6));
-      border-bottom: 1px solid rgba(255,255,255,.06);
-    }
-    .brand{display:flex;align-items:center;gap:14px}
-    .logo{
-      width:44px;height:44px;border-radius:12px;
-      background: linear-gradient(135deg, var(--accent), #7cc7ff);
-      box-shadow: 0 8px 20px var(--ring);
-    }
-    nav{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
-    nav a{color:var(--text);opacity:.9}
-    nav a:hover{opacity:1}
-    .topbar{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
-
-    .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center;padding:28px 0 12px}
-    .hero h1{font-size:clamp(28px, 4vw, 48px);line-height:1.15;margin:0 0 10px}
-    .subtitle{font-size:clamp(16px, 2.2vw, 20px);color:var(--muted)}
-    .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
-    .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 16px;border-radius:14px;font-weight:600}
-    .btn.primary{background:linear-gradient(135deg, var(--accent), #7cc7ff);color:#06111e;box-shadow:0 10px 30px var(--ring)}
-    .btn.ghost{border:1px solid rgba(255,255,255,.12);color:var(--text);background:rgba(255,255,255,.02)}
-
-    .card{background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.02));
-      border:1px solid rgba(255,255,255,.06); border-radius:18px; box-shadow: var(--shadow)}
-    .card.pad{padding:22px}
-
-    .grid{display:grid; gap:18px}
-    .grid.cols-3{grid-template-columns:repeat(3,1fr)}
-    .grid.cols-2{grid-template-columns:repeat(2,1fr)}
-
-    section{margin:26px 0}
-    h2{font-size:22px;margin:0 0 10px}
-    .section-head{display:flex;align-items:center;gap:10px;margin-bottom:12px}
-    .chip{font-size:12px;color:#071018;background:linear-gradient(135deg,var(--accent-2), #8ef0ab);
-      padding:6px 10px;border-radius:999px;font-weight:700;letter-spacing:.02em}
-
-    .kpis{display:flex;gap:14px;flex-wrap:wrap}
-    .kpi{padding:10px 14px;border-radius:14px;background:rgba(255,255,255,.03);
-         border:1px dashed rgba(255,255,255,.1);font-size:13px;color:var(--muted)}
-
-    /* Lists */
-    ul.clean{list-style:none;padding:0;margin:0;display:grid;gap:8px}
-    .item{display:grid;gap:4px}
-    .meta{font-size:12px;color:var(--muted)}
-    .tag-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
-    .tag{font-size:12px;padding:6px 10px;border-radius:999px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06)}
-
-    .skills{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
-    .skill-box{padding:14px;border-radius:14px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06)}
-    .skill-box h3{margin:0 0 6px;font-size:14px}
-    .skill-box p{margin:0;color:var(--muted);font-size:13px}
-
-    /* Timeline */
-    .timeline{position:relative}
-    .timeline:before{content:"";position:absolute;left:14px;top:0;bottom:0;width:2px;background:rgba(255,255,255,.08)}
-    .tl-item{position:relative;padding-left:42px;margin:14px 0}
-    .tl-item:before{content:"";position:absolute;left:8px;top:8px;width:14px;height:14px;border-radius:50%;
-      background:linear-gradient(135deg,var(--accent),#7cc7ff);box-shadow:0 0 0 4px rgba(98,160,255,.15)}
-    .tl-title{display:flex;align-items:center;justify-content:space-between;gap:12px}
-
-    /* Footer */
-    footer{margin:36px 0 18px;color:var(--muted);font-size:13px}
-
-    /* Responsive */
-    @media (max-width: 960px){
-      .hero{grid-template-columns:1fr}
-      .grid.cols-3{grid-template-columns:1fr}
-      .grid.cols-2{grid-template-columns:1fr}
-      .skills{grid-template-columns:repeat(2,1fr)}
-    }
-    @media (max-width: 560px){
-      .skills{grid-template-columns:1fr}
-    }
-  </style>
 </head>
 <body>
   <header>
@@ -118,7 +17,7 @@
         <div class="logo" aria-hidden="true"></div>
         <div>
           <div style="font-weight:800; letter-spacing:.2px;">Sri Devi Muvva</div>
-          <div class="meta">Software Engineer · Full‑Stack · Cloud & DevOps</div>
+          <div class="meta">Software Engineer · Full-Stack · Cloud & DevOps</div>
         </div>
       </div>
       <nav>
@@ -134,16 +33,17 @@
   </header>
 
   <main class="container">
+    <!-- Hero -->
     <section class="hero">
       <div>
         <h1>Hi, I’m Sri Devi — a software engineer who ships resilient, scalable systems.</h1>
-        <p class="subtitle">Hands-on across backend & frontend, cloud deployments, and CI/CD. F1‑OPT authorized (STEM eligible) — work eligible in the U.S. for 3 years without sponsorship.</p>
+        <p class="subtitle">Hands-on across backend & frontend, cloud deployments, and CI/CD. F1-OPT authorized (STEM eligible) — work eligible in the U.S. for 3 years without sponsorship.</p>
         <div class="cta">
           <a class="btn primary" href="#experience">View Experience</a>
           <a class="btn ghost" href="Sri_Devi_Muvva_resume.pdf" download>Download Résumé</a>
           <a class="btn ghost" href="mailto:muvvasridevi123@gmail.com">Email Me</a>
         </div>
-        <div class="kpis" aria-label="Highlights">
+        <div class="kpis">
           <div class="kpi">Deployment speed ↑ via Jenkins, Docker, Kubernetes</div>
           <div class="kpi">Frontend perf +20% with Angular</div>
           <div class="kpi">Reliability +20% for IQVIA clients</div>
@@ -154,7 +54,7 @@
           <h2 id="about">Personal Summary</h2>
           <span class="chip">About</span>
         </div>
-        <p>Highly motivated Software Engineer with experience in backend & frontend development, cloud deployments, and CI/CD pipelines. Strong foundation in OS, memory management, and networking; collaborative in Agile teams to deliver reliable solutions. Passionate about building cross‑platform applications and contributing to high‑impact products.</p>
+        <p>Highly motivated Software Engineer with experience in backend & frontend development, cloud deployments, and CI/CD pipelines. Strong foundation in OS, memory management, and networking; collaborative in Agile teams to deliver reliable solutions. Passionate about building cross-platform applications and contributing to high-impact products.</p>
         <ul class="clean" style="margin-top:10px">
           <li class="item"><span class="meta">Phone</span> 9152181561</li>
           <li class="item"><span class="meta">Email</span> <a href="mailto:muvvasridevi123@gmail.com">muvvasridevi123@gmail.com</a></li>
@@ -163,141 +63,79 @@
       </div>
     </section>
 
+    <!-- Skills -->
     <section id="skills">
       <div class="section-head">
         <h2>Technical Skills & Competencies</h2>
         <span class="chip">Skills</span>
       </div>
       <div class="skills">
-        <div class="skill-box">
-          <h3>Languages</h3>
-          <p>Python, C, SQL, HTML, CSS, JavaScript</p>
-        </div>
-        <div class="skill-box">
-          <h3>Cloud & DevOps</h3>
-          <p>AWS, Jenkins, CI/CD, Docker, Kubernetes, Git, GitHub</p>
-        </div>
-        <div class="skill-box">
-          <h3>AI & Data</h3>
-          <p>ML basics, AI concepts, Data processing (Python)</p>
-        </div>
-        <div class="skill-box">
-          <h3>Business Intelligence</h3>
-          <p>SAP, SaaS (for BI decision‑making)</p>
-        </div>
-        <div class="skill-box">
-          <h3>Operating Systems</h3>
-          <p>Linux (CLI), Windows</p>
-        </div>
-        <div class="skill-box">
-          <h3>Project Tools</h3>
-          <p>JIRA, Confluence, Sprint Planning</p>
-        </div>
-        <div class="skill-box">
-          <h3>Soft Skills</h3>
-          <p>Analytical problem‑solving, Critical thinking, Communication, Teamwork</p>
-        </div>
-        <div class="skill-box">
-          <h3>Productivity</h3>
-          <p>Excel, Word, PowerPoint</p>
-        </div>
+        <div class="skill-box"><h3>Languages</h3><p>Python, C, SQL, HTML, CSS, JavaScript</p></div>
+        <div class="skill-box"><h3>Cloud & DevOps</h3><p>AWS, Jenkins, CI/CD, Docker, Kubernetes, Git, GitHub</p></div>
+        <div class="skill-box"><h3>AI & Data</h3><p>ML basics, AI concepts, Data processing (Python)</p></div>
+        <div class="skill-box"><h3>Business Intelligence</h3><p>SAP, SaaS (for BI decision-making)</p></div>
+        <div class="skill-box"><h3>Operating Systems</h3><p>Linux (CLI), Windows</p></div>
+        <div class="skill-box"><h3>Project Tools</h3><p>JIRA, Confluence, Sprint Planning</p></div>
+        <div class="skill-box"><h3>Soft Skills</h3><p>Analytical problem-solving, Critical thinking, Communication, Teamwork</p></div>
+        <div class="skill-box"><h3>Productivity</h3><p>Excel, Word, PowerPoint</p></div>
       </div>
     </section>
 
+    <!-- Experience -->
     <section id="experience">
       <div class="section-head">
         <h2>Work Experience</h2>
         <span class="chip">Timeline</span>
       </div>
-
       <div class="timeline">
         <div class="tl-item card pad">
-          <div class="tl-title">
-            <strong>Software Engineer · Persistent Systems</strong>
-            <span class="meta">Dec 2022 — Jul 2023</span>
-          </div>
+          <div class="tl-title"><strong>Software Engineer · Persistent Systems</strong><span class="meta">Dec 2022 — Jul 2023</span></div>
           <ul class="clean">
             <li>Implemented CI/CD pipelines using Jenkins, Docker, Kubernetes, improving deployment speed and scalability.</li>
             <li>Managed patching and server integration for IQVIA clients, boosting application reliability by 20%.</li>
             <li>Streamlined workflows via JIRA & Confluence, enhancing sprint planning efficiency.</li>
-            <li>Collaborated in a Git‑based environment for seamless team integration.</li>
+            <li>Collaborated in a Git-based environment for seamless team integration.</li>
           </ul>
-          <div class="tag-row">
-            <span class="tag">Jenkins</span><span class="tag">Docker</span><span class="tag">Kubernetes</span><span class="tag">Git</span>
-          </div>
         </div>
-
         <div class="tl-item card pad">
-          <div class="tl-title">
-            <strong>Angular Developer · Persistent Systems</strong>
-            <span class="meta">Jun 2022 — Dec 2022</span>
-          </div>
+          <div class="tl-title"><strong>Angular Developer · Persistent Systems</strong><span class="meta">Jun 2022 — Dec 2022</span></div>
           <ul class="clean">
             <li>Optimized frontend performance, achieving 20% faster load speed.</li>
             <li>Developed responsive UI components with Angular, HTML, CSS, JavaScript.</li>
             <li>Improved development turnaround time by 20% via agile collaboration.</li>
           </ul>
-          <div class="tag-row">
-            <span class="tag">Angular</span><span class="tag">TypeScript</span><span class="tag">HTML/CSS</span>
-          </div>
         </div>
-
         <div class="tl-item card pad">
-          <div class="tl-title">
-            <strong>Intern · Persistent Systems</strong>
-            <span class="meta">Feb 2022 — Jul 2022</span>
-          </div>
+          <div class="tl-title"><strong>Intern · Persistent Systems</strong><span class="meta">Feb 2022 — Jul 2022</span></div>
           <ul class="clean">
             <li>Coded in Python and Angular; wrote optimized MySQL queries.</li>
             <li>Assisted in data processing & system optimization contributing to feature enhancements.</li>
             <li>Supported tool improvements in collaboration with team leads.</li>
           </ul>
-          <div class="tag-row">
-            <span class="tag">Python</span><span class="tag">Angular</span><span class="tag">MySQL</span>
-          </div>
         </div>
       </div>
     </section>
 
+    <!-- Education & Projects -->
     <section id="education" class="grid cols-2">
       <div class="card pad">
         <div class="section-head">
           <h2>Education</h2>
           <span class="chip">Academics</span>
         </div>
-        <div class="item">
-          <strong>Master of Science — Information Science & Technology</strong>
-          <div class="meta">Missouri University of Science and Technology, Rolla, MO · May 2025 · GPA 3.5/4</div>
-          <div>Coursework: Data Science, Use of Business Intelligence, Cyber Security</div>
-        </div>
-        <hr style="border:0;border-top:1px solid rgba(255,255,255,.08);margin:12px 0">
-        <div class="item">
-          <strong>Bachelor of Science — Electrical & Communication Engineering</strong>
-          <div class="meta">Sreyas Institute of Engineering and Technology · Jun 2022 · GPA 3.4/4</div>
-          <div>Coursework: Embedded Systems, Python, C, Database Management Systems</div>
-        </div>
+        <div class="item"><strong>Master of Science — Information Science & Technology</strong><div class="meta">Missouri S&T · May 2025 · GPA 3.5/4</div></div>
+        <div class="item"><strong>Bachelor of Science — Electrical & Communication Engineering</strong><div class="meta">Sreyas Institute of Eng & Tech · Jun 2022 · GPA 3.4/4</div></div>
       </div>
-
       <div class="card pad">
         <div class="section-head">
           <h2 id="projects">Projects</h2>
           <span class="chip">ML</span>
         </div>
-        <div class="item">
-          <strong>Deep Food — Food Image Classification</strong>
-          <div class="meta">Python, TensorFlow, CNNs</div>
-          <ul class="clean">
-            <li>Built and trained a CNN to classify food images into categories.</li>
-            <li>Applied data preprocessing and augmentation for accuracy and robustness.</li>
-            <li>Visualized results with NumPy, Pandas, and Matplotlib.</li>
-          </ul>
-          <div class="tag-row">
-            <span class="tag">TensorFlow</span><span class="tag">CNN</span><span class="tag">Python</span>
-          </div>
-        </div>
+        <div class="item"><strong>Deep Food — Food Image Classification</strong><div class="meta">Python, TensorFlow, CNNs</div></div>
       </div>
     </section>
 
+    <!-- Certifications -->
     <section id="certifications">
       <div class="section-head">
         <h2>Certifications</h2>
@@ -305,10 +143,7 @@
       </div>
       <div class="card pad">
         <ul class="clean">
-          <li>
-            <strong>Microsoft Azure (Credly badge)</strong> —
-            <a target="_blank" rel="noopener" href="https://www.credly.com/badges/79a2fd26-1e3d-404b-bd62-72ca8e19c27a/public_url">Verify</a>
-          </li>
+          <li><strong>Microsoft Azure</strong> — <a href="https://www.credly.com/badges/79a2fd26-1e3d-404b-bd62-72ca8e19c27a/public_url" target="_blank">Verify</a></li>
         </ul>
       </div>
     </section>
@@ -317,10 +152,6 @@
       <div>© <span id="y"></span> Sri Devi Muvva • Built with HTML & CSS • <a href="mailto:muvvasridevi123@gmail.com">Contact</a></div>
     </footer>
   </main>
-
-  <script>
-    // Set year
-    document.getElementById('y').textContent = new Date().getFullYear();
-  </script>
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 </body>
 </html>
