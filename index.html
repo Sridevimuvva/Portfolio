@@ -1,157 +1,263 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Sri Devi Muvva — Portfolio</title>
-  <meta name="description" content="Portfolio site for Sri Devi Muvva — Software Engineer" />
-  <link rel="stylesheet" href="style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sri Devi Muvva | Software Engineer</title>
+  <style>
+    :root {
+      --primary: #6b8e23; /* olive green */
+      --secondary: #3f4f2f;
+      --text: #2f2f2f;
+      --muted: #6b6b6b;
+      --bg: #f5f5e9; /* cream */
+      --card: #fffdf5;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Calibri', 'Segoe UI', Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 24px;
+    }
+
+    header {
+      background: linear-gradient(135deg, #fffdf5, #f0f2e3);
+      padding: 32px;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+      margin-bottom: 32px;
+    }
+
+    header h1 {
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 2.4rem;
+      color: var(--secondary);
+    }
+
+    header h2 {
+      font-size: 1.2rem;
+      font-weight: 500;
+      color: var(--primary);
+      margin-top: 4px;
+    }
+
+    .contact {
+      margin-top: 12px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .contact a {
+      color: var(--primary);
+      text-decoration: none;
+      margin-right: 12px;
+    }
+
+    section {
+      background: var(--card);
+      background: var(--card);
+      padding: 28px;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+      margin-bottom: 28px;
+    }
+
+    section h3 {
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 1.4rem;
+      margin-bottom: 16px;
+      color: var(--secondary);
+      border-left: 4px solid var(--primary);
+      padding-left: 12px;
+    }
+
+    .summary {
+      font-size: 1rem;
+      color: var(--text);
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 16px;
+    }
+
+    .skill-category h4 {
+      font-size: 1rem;
+      margin-bottom: 6px;
+      color: var(--secondary);
+    }
+
+    .skill-category p {
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+
+    .experience {
+      margin-bottom: 24px;
+    }
+
+    .experience h4 {
+      font-size: 1.05rem;
+      color: var(--secondary);
+    }
+
+    .experience span {
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    ul {
+      margin-top: 10px;
+      padding-left: 20px;
+    }
+
+    ul li {
+      margin-bottom: 8px;
+      font-size: 0.95rem;
+    }
+
+    .education-item {
+      margin-bottom: 16px;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.9rem;
+      }
+
+      section {
+        padding: 20px;
+      }
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <div class="container topbar">
-      <div class="brand">
-        <div class="logo" aria-hidden="true"></div>
-        <div>
-          <div style="font-weight:800; letter-spacing:.2px;">Sri Devi Muvva</div>
-          <div class="meta">Software Engineer · Full-Stack · Cloud & DevOps</div>
-        </div>
+  <div class="container">
+    <header>
+      <h1>Sri Devi Muvva</h1>
+      <h2>Software Engineer</h2>
+      <div class="contact">
+        <a href="mailto:muvvasridevi123@gmail.com">muvvasridevi123@gmail.com</a>
+        <a href="https://www.linkedin.com/in/sridevimuvva/" target="_blank">LinkedIn</a>
+        <span>📞 +1 (915) 218-1561</span>
       </div>
-      <nav>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#experience">Experience</a>
-        <a href="#education">Education</a>
-        <a href="#projects">Projects</a>
-        <a href="#certifications">Certifications</a>
-        <a class="btn primary" href="https://www.linkedin.com/in/sridevimuvva/" target="_blank" rel="noopener">LinkedIn</a>
-      </nav>
-    </div>
-  </header>
+    </header>
 
-  <main class="container">
-    <!-- Hero -->
-    <section class="hero">
-      <div>
-        <h1>Hi, I’m Sri Devi — a software engineer who ships resilient, scalable systems.</h1>
-        <p class="subtitle">Hands-on across backend & frontend, cloud deployments, and CI/CD. F1-OPT authorized (STEM eligible) — work eligible in the U.S. for 3 years without sponsorship.</p>
-        <div class="cta">
-          <a class="btn primary" href="#experience">View Experience</a>
-          <a class="btn ghost" href="Sri_Devi_Muvva_resume.pdf" download>Download Résumé</a>
-          <a class="btn ghost" href="mailto:muvvasridevi123@gmail.com">Email Me</a>
+    <section>
+      <h3>Professional Summary</h3>
+      <p class="summary">
+        Software Engineer with 3+ years of experience building and modernizing enterprise healthcare applications. Strong expertise in Java, Spring Boot, REST APIs, and multithreaded systems, with hands-on experience transforming legacy COBOL workflows into high-performance solutions. Skilled in Angular and React, automation, CI/CD, cloud-native deployments, and production support in Agile environments.
+      </p>
+    </section>
+
+    <section>
+      <h3>Technical Skills</h3>
+      <div class="skills-grid">
+        <div class="skill-category">
+          <h4>Programming</h4>
+          <p>Java, JavaScript (ES6), Python, SQL / MySQL</p>
         </div>
-        <div class="kpis">
-          <div class="kpi">Deployment speed ↑ via Jenkins, Docker, Kubernetes</div>
-          <div class="kpi">Frontend perf +20% with Angular</div>
-          <div class="kpi">Reliability +20% for IQVIA clients</div>
+        <div class="skill-category">
+          <h4>Backend</h4>
+          <p>Spring Boot, Microservices, REST APIs, Multithreading</p>
+        </div>
+        <div class="skill-category">
+          <h4>Frontend</h4>
+          <p>Angular, React, HTML5, CSS3, Accessibility</p>
+        </div>
+        <div class="skill-category">
+          <h4>DevOps & Cloud</h4>
+          <p>AWS, Jenkins, Docker, Kubernetes, Linux</p>
+        </div>
+        <div class="skill-category">
+          <h4>Automation</h4>
+          <p>AS400 Automation, Cron Jobs, Workflow Automation</p>
+        </div>
+        <div class="skill-category">
+          <h4>Data & AI</h4>
+          <p>TensorFlow, Pandas, NumPy, Matplotlib</p>
         </div>
       </div>
-      <div class="card pad">
-        <div class="section-head">
-          <h2 id="about">Personal Summary</h2>
-          <span class="chip">About</span>
-        </div>
-        <p>Highly motivated Software Engineer with experience in backend & frontend development, cloud deployments, and CI/CD pipelines. Strong foundation in OS, memory management, and networking; collaborative in Agile teams to deliver reliable solutions. Passionate about building cross-platform applications and contributing to high-impact products.</p>
-        <ul class="clean" style="margin-top:10px">
-          <li class="item"><span class="meta">Phone</span> 9152181561</li>
-          <li class="item"><span class="meta">Email</span> <a href="mailto:muvvasridevi123@gmail.com">muvvasridevi123@gmail.com</a></li>
-          <li class="item"><span class="meta">Location</span> Open to opportunities (U.S.)</li>
+    </section>
+
+    <section>
+      <h3>Professional Experience</h3>
+
+      <div class="experience">
+        <h4>Software Engineer – Optum</h4>
+        <span>Dec 2024 – Present</span>
+        <ul>
+          <li>Modernized COBOL-based DUR services using multithreaded Java, improving performance by 45%.</li>
+          <li>Implemented high-availability database hotswap mechanisms with 95% less downtime.</li>
+          <li>Automated AS400 workflows using cron jobs and REST APIs, reducing manual effort by 65%.</li>
+          <li>Developed a secure React UI with role-based access, reducing support tickets by 40%.</li>
+        </ul>
+      </div>
+
+      <div class="experience">
+        <h4>Software Engineer Intern – CVS Health</h4>
+        <span>May 2024 – Aug 2024</span>
+        <ul>
+          <li>Contributed to CMI rules framework for PBM product adoption tracking.</li>
+          <li>Implemented Python-based automated data quality checks.</li>
+          <li>Worked on full-stack HIRS application using Python and Angular.</li>
+        </ul>
+      </div>
+
+      <div class="experience">
+        <h4>Software Engineer – Persistent Systems (Client: IQVIA)</h4>
+        <span>Jan 2022 – Jul 2023</span>
+        <ul>
+          <li>Developed Angular SPAs and improved Core Web Vitals by ~20%.</li>
+          <li>Built CI/CD pipelines using Jenkins, Docker, Kubernetes, and AWS.</li>
+          <li>Resolved production issues and reduced MTTR by up to 25%.</li>
         </ul>
       </div>
     </section>
 
-    <!-- Skills -->
-    <section id="skills">
-      <div class="section-head">
-        <h2>Technical Skills & Competencies</h2>
-        <span class="chip">Skills</span>
+    <section>
+      <h3>Education</h3>
+      <div class="education-item">
+        <strong>Missouri University of Science & Technology</strong><br />
+        Master’s in Information Science (GPA: 3.4/4.0) — 2023–2025
       </div>
-      <div class="skills">
-        <div class="skill-box"><h3>Languages</h3><p>Python, C, SQL, HTML, CSS, JavaScript</p></div>
-        <div class="skill-box"><h3>Cloud & DevOps</h3><p>AWS, Jenkins, CI/CD, Docker, Kubernetes, Git, GitHub</p></div>
-        <div class="skill-box"><h3>AI & Data</h3><p>ML basics, AI concepts, Data processing (Python)</p></div>
-        <div class="skill-box"><h3>Business Intelligence</h3><p>SAP, SaaS (for BI decision-making)</p></div>
-        <div class="skill-box"><h3>Operating Systems</h3><p>Linux (CLI), Windows</p></div>
-        <div class="skill-box"><h3>Project Tools</h3><p>JIRA, Confluence, Sprint Planning</p></div>
-        <div class="skill-box"><h3>Soft Skills</h3><p>Analytical problem-solving, Critical thinking, Communication, Teamwork</p></div>
-        <div class="skill-box"><h3>Productivity</h3><p>Excel, Word, PowerPoint</p></div>
+      <div class="education-item">
+        <strong>Sreyas Institute of Engineering & Technology</strong><br />
+        Bachelor’s in Electronics & Communication Engineering — 2018–2022
       </div>
     </section>
 
-    <!-- Experience -->
-    <section id="experience">
-      <div class="section-head">
-        <h2>Work Experience</h2>
-        <span class="chip">Timeline</span>
-      </div>
-      <div class="timeline">
-        <div class="tl-item card pad">
-          <div class="tl-title"><strong>Software Engineer · Persistent Systems</strong><span class="meta">Dec 2022 — Jul 2023</span></div>
-          <ul class="clean">
-            <li>Implemented CI/CD pipelines using Jenkins, Docker, Kubernetes, improving deployment speed and scalability.</li>
-            <li>Managed patching and server integration for IQVIA clients, boosting application reliability by 20%.</li>
-            <li>Streamlined workflows via JIRA & Confluence, enhancing sprint planning efficiency.</li>
-            <li>Collaborated in a Git-based environment for seamless team integration.</li>
-          </ul>
-        </div>
-        <div class="tl-item card pad">
-          <div class="tl-title"><strong>Angular Developer · Persistent Systems</strong><span class="meta">Jun 2022 — Dec 2022</span></div>
-          <ul class="clean">
-            <li>Optimized frontend performance, achieving 20% faster load speed.</li>
-            <li>Developed responsive UI components with Angular, HTML, CSS, JavaScript.</li>
-            <li>Improved development turnaround time by 20% via agile collaboration.</li>
-          </ul>
-        </div>
-        <div class="tl-item card pad">
-          <div class="tl-title"><strong>Intern · Persistent Systems</strong><span class="meta">Feb 2022 — Jul 2022</span></div>
-          <ul class="clean">
-            <li>Coded in Python and Angular; wrote optimized MySQL queries.</li>
-            <li>Assisted in data processing & system optimization contributing to feature enhancements.</li>
-            <li>Supported tool improvements in collaboration with team leads.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- Education & Projects -->
-    <section id="education" class="grid cols-2">
-      <div class="card pad">
-        <div class="section-head">
-          <h2>Education</h2>
-          <span class="chip">Academics</span>
-        </div>
-        <div class="item"><strong>Master of Science — Information Science & Technology</strong><div class="meta">Missouri S&T · May 2025 · GPA 3.5/4</div></div>
-        <div class="item"><strong>Bachelor of Science — Electrical & Communication Engineering</strong><div class="meta">Sreyas Institute of Eng & Tech · Jun 2022 · GPA 3.4/4</div></div>
-      </div>
-      <div class="card pad">
-        <div class="section-head">
-          <h2 id="projects">Projects</h2>
-          <span class="chip">ML</span>
-        </div>
-        <div class="item"><strong>Deep Food — Food Image Classification</strong><div class="meta">Python, TensorFlow, CNNs</div></div>
-      </div>
-    </section>
-
-    <!-- Certifications -->
-    <section id="certifications">
-      <div class="section-head">
-        <h2>Certifications</h2>
-        <span class="chip">Cloud</span>
-      </div>
-      <div class="card pad">
-        <ul class="clean">
-          <li><strong>Microsoft Azure</strong> — <a href="https://www.credly.com/badges/79a2fd26-1e3d-404b-bd62-72ca8e19c27a/public_url" target="_blank">Verify</a></li>
-        </ul>
-      </div>
+    <section>
+      <h3>Certifications</h3>
+      <ul>
+        <li>Microsoft Azure Certification</li>
+      </ul>
     </section>
 
     <footer>
-      <div>© <span id="y"></span> Sri Devi Muvva • Built with HTML & CSS • <a href="mailto:muvvasridevi123@gmail.com">Contact</a></div>
+      © 2026 Sri Devi Muvva · Portfolio Resume
     </footer>
-  </main>
-  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+  </div>
 </body>
 </html>
