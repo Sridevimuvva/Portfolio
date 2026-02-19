@@ -14,9 +14,7 @@
   --radius: 18px;
 }
 
-/* =========
-   Base
-   ========= */
+
 *{ box-sizing:border-box; }
 html,body{ height:100%; }
 
@@ -40,9 +38,7 @@ a:hover{ text-decoration:underline; }
   padding: 0 16px 28px;
 }
 
-/* =========
-   Cards & Sections
-   ========= */
+
 .card{
   background: rgba(255,253,244,.92);
   border: 1px solid var(--border);
@@ -65,9 +61,7 @@ a:hover{ text-decoration:underline; }
   padding-left: 10px;
 }
 
-/* =========
-   Header
-   ========= */
+
 .hero{
   padding: 18px 18px 14px;
   margin-bottom: 18px;
@@ -131,9 +125,7 @@ a:hover{ text-decoration:underline; }
 }
 .btn:active{ transform: translateY(0); }
 
-/* =========
-   Layout
-   ========= */
+
 .grid{
   display:grid;
   grid-template-columns: 1.55fr .85fr;
@@ -142,9 +134,7 @@ a:hover{ text-decoration:underline; }
 
 .col{ display:flex; flex-direction:column; gap: 18px; }
 
-/* =========
-   Experience
-   ========= */
+
 .xp{ padding-top: 4px; }
 .xp__head{
   display:flex;
@@ -186,9 +176,7 @@ a:hover{ text-decoration:underline; }
   background: linear-gradient(90deg, transparent, rgba(46,58,31,.22), transparent);
 }
 
-/* =========
-   Skills
-   ========= */
+
 .skillgroup{
   padding: 10px 0;
   border-top: 1px dashed rgba(46,58,31,.18);
@@ -206,9 +194,6 @@ a:hover{ text-decoration:underline; }
   font-size: 14px;
 }
 
-/* =========
-   Education
-   ========= */
 .edu__school{
   margin: 0;
   font-family: "Times New Roman", Times, serif;
@@ -226,9 +211,7 @@ a:hover{ text-decoration:underline; }
   color: var(--olive-900);
 }
 
-/* =========
-   Footer
-   ========= */
+
 .footer{
   margin-top: 18px;
   text-align:center;
@@ -236,18 +219,15 @@ a:hover{ text-decoration:underline; }
   font-size: 12px;
 }
 
-/* =========
-   Responsive
-   ========= */
+
+  
 @media (max-width: 900px){
   .grid{ grid-template-columns: 1fr; }
   .contact{ text-align:left; }
   .hero__actions{ justify-content:flex-start; }
 }
 
-/* =========
-   Print
-   ========= */
+
 @media print{
   body{
     background: #fff;
