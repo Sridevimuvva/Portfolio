@@ -1,85 +1,215 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sri Devi Muvva Resume</title>
-  <link rel="stylesheet" href="resume.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sri Devi Muvva — Resume</title>
+  <link rel="stylesheet" href="resume.css" />
 </head>
 
 <body>
+  <!-- Top action bar -->
+  <div class="topbar">
+    <div class="topbar__inner">
+      <div class="brand">Sri Devi Muvva</div>
 
-<div class="page">
+      <div class="actions">
+        <button class="btn" id="themeToggle" type="button" aria-label="Toggle theme">
+          🌙 Dark
+        </button>
 
-  <header class="header">
-    <h1>Sri Devi Muvva</h1>
-    <p class="role">Software Engineer</p>
-    <p class="contact">
-      +1 (915) 218-1561 |
-      muvvasridevi123@gmail.com |
-      linkedin.com/in/sridevimuvva
-    </p>
-  </header>
+        <!-- Put your PDF in the same repo folder with this exact name -->
+        <a class="btn btn--ghost" href="./Muvva_Sridevi_Resume_02192026.pdf" download>
+          ⬇ Download PDF
+        </a>
 
-  <section>
-    <h2>Professional Summary</h2>
-    <p>
-      Software Engineer with 3+ years of experience designing, building, and deploying scalable
-      enterprise applications and distributed systems. Strong expertise in Java, Spring Boot,
-      React, REST APIs, and AWS with proven success improving performance and reliability of
-      production healthcare systems.
-    </p>
-  </section>
-
-  <section>
-    <h2>Professional Experience</h2>
-
-    <div class="job">
-      <h3>Software Engineer – Optum</h3>
-      <span class="date">Dec 2024 – Present</span>
-      <ul>
-        <li>Modernized legacy healthcare workflows into Java microservices improving throughput by 45%.</li>
-        <li>Built REST APIs and React components improving UX and reducing tickets by 40%.</li>
-        <li>Implemented high-availability database failover reducing downtime by 95%.</li>
-      </ul>
+        <button class="btn btn--ghost" type="button" onclick="window.print()">
+          🖨 Print
+        </button>
+      </div>
     </div>
+  </div>
 
-    <div class="job">
-      <h3>Software Engineer Intern – CVS Health</h3>
-      <span class="date">May 2024 – Aug 2024</span>
-      <ul>
-        <li>Developed Python backend services automating data validation improving accuracy by 70%.</li>
-        <li>Built Angular UI improving usability and performance.</li>
-      </ul>
-    </div>
+  <!-- Centered page -->
+  <main class="wrap">
+    <article class="resume card" role="document">
+      <!-- Header -->
+      <header class="header">
+        <h1 class="name">SRI DEVI MUVVA</h1>
+        <div class="contact">
+          <a href="tel:+19152181561">+1 (915) 218–1561</a>
+          <span class="dot">•</span>
+          <a href="mailto:muvvasridevi123@gmail.com">muvvasridevi123@gmail.com</a>
+          <span class="dot">•</span>
+          <span>LinkedIn</span>
+        </div>
+      </header>
 
-    <div class="job">
-      <h3>Software Engineer – Persistent Systems (IQVIA)</h3>
-      <span class="date">Jan 2022 – Jul 2023</span>
-      <ul>
-        <li>Developed full-stack applications using Java, Spring Boot, Angular, and REST APIs.</li>
-        <li>Deployed cloud applications using AWS, Docker, Kubernetes, Jenkins.</li>
-        <li>Reduced MTTR by 25% through production debugging and RCA.</li>
-      </ul>
-    </div>
+      <!-- Summary -->
+      <section class="section">
+        <h2>PROFESSIONAL SUMMARY</h2>
+        <p>
+          Software Engineer with 3+ years of experience designing, building, and deploying scalable, cloud-native applications and
+          distributed systems. Strong expertise in Java, JavaScript, React, REST APIs, and AWS, with proven success improving
+          performance, reliability, availability, and scalability of production systems serving 50,000+ users. Experienced in
+          microservices architecture, object-oriented programming, and end-to-end SDLC ownership (design, implementation,
+          testing, deployment, and production support). Skilled in data structures, database schema design, and modern design
+          patterns, with hands-on experience integrating internal services and third-party/vendor APIs in complex platform
+          ecosystems. Passionate about building resilient, customer-focused platforms, improving operational efficiency, and
+          leveraging Generative AI at the application layer to modernize support experiences. Adept at collaborating across
+          engineering teams, product stakeholders, and external vendors to deliver robust, maintainable, high-quality features
+          with a strong focus on reliability, observability, and operational excellence.
+        </p>
+      </section>
 
-  </section>
+      <!-- Skills -->
+      <section class="section">
+        <h2>TECHNICAL SKILLS</h2>
 
-  <section>
-    <h2>Technical Skills</h2>
-    <p><b>Languages:</b> Java, Python, JavaScript, SQL</p>
-    <p><b>Backend:</b> Spring Boot, Microservices, REST APIs</p>
-    <p><b>Frontend:</b> React, Angular, HTML, CSS</p>
-    <p><b>Cloud & DevOps:</b> AWS, Docker, Kubernetes, Jenkins</p>
-  </section>
+        <div class="skillgrid">
+          <div class="skillrow">
+            <div class="k">Programming Languages</div>
+            <div class="v">Java, Python, JavaScript, C, Bash, SQL</div>
+          </div>
 
-  <section>
-    <h2>Education</h2>
-    <p><b>Missouri University of Science & Technology</b></p>
-    <p>Master’s in Information Science (2023–2025)</p>
-  </section>
+          <div class="skillrow">
+            <div class="k">Backend & Architecture</div>
+            <div class="v">Spring Boot, Microservices Architecture, REST APIs, Multithreading, Design Patterns</div>
+          </div>
 
-</div>
+          <div class="skillrow">
+            <div class="k">Frontend</div>
+            <div class="v">React, Angular, HTML5, CSS3, Accessibility (WCAG), Performance Optimization</div>
+          </div>
 
+          <div class="skillrow">
+            <div class="k">Cloud & Containers</div>
+            <div class="v">AWS, Docker, Kubernetes</div>
+          </div>
+
+          <div class="skillrow">
+            <div class="k">DevOps & CI/CD</div>
+            <div class="v">Jenkins, CI/CD Pipelines, Git/GitHub, Linux, Unix</div>
+          </div>
+
+          <div class="skillrow">
+            <div class="k">Testing & Quality</div>
+            <div class="v">Unit Testing, Integration Testing, JUnit, Mockito, API Testing, Debugging, Code Reviews</div>
+          </div>
+
+          <div class="skillrow">
+            <div class="k">Automation & Scheduling</div>
+            <div class="v">Cron Jobs, Workflow Automation, AS400 Automation</div>
+          </div>
+
+          <div class="skillrow">
+            <div class="k">Data & Analytics</div>
+            <div class="v">Databricks, Apache Spark (Foundational), SQL Analytics, Data Pipelines, Pandas, NumPy</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Experience -->
+      <section class="section">
+        <h2>PROFESSIONAL EXPERIENCE</h2>
+
+        <div class="job">
+          <div class="job__top">
+            <h3>Software Engineer</h3>
+            <div class="pill">Client: Optum &nbsp;|&nbsp; Dec 2024 – Present</div>
+          </div>
+          <ul>
+            <li>Designed and modernized legacy healthcare workflows into Java-based distributed microservices, improving system throughput by 45% and increasing scalability and reliability.</li>
+            <li>Built and deployed RESTful APIs and backend services, enabling seamless integration with internal and external platforms.</li>
+            <li>Developed React and TypeScript-based frontend components with role-based access control, improving user experience and reducing support tickets by 40%.</li>
+            <li>Implemented high-availability database failover mechanisms, reducing deployment downtime by 95% and improving system resilience.</li>
+            <li>Automated batch workflows using cron jobs and service integrations, eliminating 10+ hours/week of manual operational work.</li>
+            <li>Supported production systems, performed debugging, incident resolution, and reliability improvements for services supporting 50,000+ users.</li>
+            <li>Collaborated in Agile environments, contributing to design discussions, code reviews, and continuous delivery pipelines.</li>
+          </ul>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="job">
+          <div class="job__top">
+            <h3>Software Engineer - Intern</h3>
+            <div class="pill">CVS Health &nbsp;|&nbsp; May 2024 – Aug 2024</div>
+          </div>
+          <ul>
+            <li>Designed and developed backend services using Python and REST APIs to automate data validation workflows, improving data quality accuracy by 70% and reducing manual intervention.</li>
+            <li>Built and enhanced frontend components using Angular, JavaScript, HTML, and CSS, improving application usability, performance, and maintainability for internal enterprise users.</li>
+            <li>Contributed to the development of scalable data ingestion pipelines, enabling efficient processing, validation, and integration of large healthcare datasets from third-party systems.</li>
+            <li>Collaborated with senior engineers and cross-functional teams to design, test, and deploy reliable software solutions in an Agile development environment, ensuring high code quality and system reliability.</li>
+            <li>Assisted in debugging, troubleshooting, and optimizing backend services and APIs, improving overall system performance and reducing operational issues.</li>
+            <li>Participated in code reviews, testing, and continuous integration workflows, contributing to maintainable, scalable, and production-ready code.</li>
+          </ul>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="job">
+          <div class="job__top">
+            <h3>Software Engineer</h3>
+            <div class="pill">Persistent Systems | Client: IQVIA &nbsp;|&nbsp; Jan 2022 – July 2023</div>
+          </div>
+          <ul>
+            <li>Developed and maintained scalable full-stack enterprise applications using Java, JavaScript, Angular, Spring Boot, and REST APIs, supporting critical healthcare business workflows and improving system reliability and performance.</li>
+            <li>Designed and implemented backend microservices and frontend components, ensuring seamless integration between distributed systems and improving application responsiveness and user experience.</li>
+            <li>Built, containerized, and deployed applications using AWS, Docker, Kubernetes, and Jenkins CI/CD pipelines, improving deployment efficiency, scalability, and release reliability by 20%.</li>
+            <li>Successfully deployed and configured multiple client environments across Production, Development, and Test environments, achieving a 100% deployment success rate while ensuring system stability and minimal downtime.</li>
+            <li>Managed end-to-end deployment processes, including environment setup, configuration management, release validation, and post-deployment verification to ensure smooth client onboarding and system availability.</li>
+            <li>Provided clients and internal stakeholders with detailed application logs, monitoring insights, and troubleshooting support, enabling faster issue resolution and improving transparency and operational efficiency.</li>
+            <li>Integrated backend services with internal and third-party systems using REST APIs, ensuring secure, reliable, and scalable data exchange across distributed platforms.</li>
+            <li>Diagnosed and resolved production issues by analyzing logs, database queries, and system metrics, reducing mean time to resolution by 15–25% and improving system stability.</li>
+            <li>Participated in incident management, root cause analysis, and continuous improvement initiatives, enhancing overall system reliability, availability, and operational readiness.</li>
+            <li>Collaborated with cross-functional teams in Agile environments, contributing to system design discussions, code reviews, testing, and continuous delivery.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Certifications -->
+      <section class="section">
+        <h2>CERTIFICATIONS</h2>
+        <ul class="compact">
+          <li>Microsoft Azure</li>
+          <li>Databricks Fundamentals</li>
+        </ul>
+      </section>
+
+      <!-- Education -->
+      <section class="section">
+        <h2>EDUCATION</h2>
+        <div class="edu">
+          <h3>Missouri University of Science &amp; Technology</h3>
+          <p>Master’s in Information Science | Rolla, Missouri (3.4/4.0)</p>
+          <p class="muted">Aug 2023 – May 2025</p>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <span>© <script>document.write(new Date().getFullYear())</script> Sri Devi Muvva</span>
+      </footer>
+    </article>
+  </main>
+
+  <script>
+    const btn = document.getElementById("themeToggle");
+    const saved = localStorage.getItem("theme");
+    if (saved) document.documentElement.dataset.theme = saved;
+
+    function syncLabel() {
+      const isDark = document.documentElement.dataset.theme === "dark";
+      btn.textContent = isDark ? "☀️ Light" : "🌙 Dark";
+    }
+    syncLabel();
+
+    btn.addEventListener("click", () => {
+      const next = (document.documentElement.dataset.theme === "dark") ? "light" : "dark";
+      document.documentElement.dataset.theme = next;
+      localStorage.setItem("theme", next);
+      syncLabel();
+    });
+  </script>
 </body>
 </html>
