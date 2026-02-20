@@ -1,243 +1,168 @@
-/* ====== THEME ====== */
 :root{
-  --bg: #f6f1de;          /* cream */
-  --paper: #fffdf5;       /* resume page */
-  --ink: #000000;         /* black text */
-  --muted: #2b2b2b;
-
-  --olive-900:#2f3e1d;    /* headings */
-  --olive-700:#556b2f;    /* accents */
-  --olive-200: rgba(85,107,47,.18);
-
-  --shadow: 0 18px 45px rgba(0,0,0,.18);
-  --radius: 18px;
-  --border: 6px solid var(--olive-700);
+  --cream: #f6f1de;      /* background */
+  --paper: #fffdf5;      /* resume sheet */
+  --olive: #556b2f;      /* headings */
+  --black: #000000;      /* text */
 }
 
-:root[data-theme="dark"]{
-  --bg: #151a12;
-  --paper: #1d2317;
-  --ink: #f4f0e0;
-  --muted: rgba(244,240,224,.88);
-
-  --olive-900:#e7e0c7;
-  --olive-700:#aab37a;
-  --olive-200: rgba(170,179,122,.24);
-
-  --shadow: 0 18px 55px rgba(0,0,0,.45);
-  --border: 6px solid rgba(170,179,122,.75);
-}
-
-/* ====== BASE ====== */
-*{ box-sizing:border-box; }
-
+/* ===== PAGE ===== */
 body{
   margin:0;
-  padding: 92px 16px 48px;
-  background: var(--bg);
-  color: var(--ink);
-  font-family: Calibri, "Segoe UI", Arial, sans-serif;
-  line-height: 1.55;
-
-  display:flex;
-  justify-content:center;
-}
-
-a{ color: var(--olive-700); text-decoration:none; }
-a:hover{ text-decoration:underline; }
-
-/* ====== TOP BAR ====== */
-.topbar{
-  position: fixed;
-  top: 0; left: 0; right: 0;
-  padding: 14px 16px;
-  z-index: 50;
-
-  background: linear-gradient(180deg, var(--paper), rgba(0,0,0,0));
-  backdrop-filter: blur(10px);
-}
-
-.topbar__inner{
-  max-width: 980px;
-  margin: 0 auto;
-
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap: 12px;
-}
-
-.brand{
+  padding:40px 16px;
+  background: var(--cream);
+  color: var(--black);
   font-family: "Times New Roman", Times, serif;
-  font-weight: 700;
-  color: var(--olive-900);
-  letter-spacing: .6px;
-}
+  line-height: 1.6;
 
-.actions{ display:flex; gap:10px; flex-wrap:wrap; }
-
-.btn{
-  border: 1px solid var(--olive-200);
-  background: rgba(255,255,255,.35);
-  color: var(--olive-900);
-  padding: 9px 12px;
-  border-radius: 12px;
-  cursor:pointer;
-  font-weight: 700;
-}
-
-:root[data-theme="dark"] .btn{
-  background: rgba(0,0,0,.25);
-}
-
-.btn--ghost{ background: transparent; }
-
-/* ====== CENTERED RESUME CARD ====== */
-.wrap{
-  width: 100%;
-  max-width: 980px;
   display:flex;
   justify-content:center;
 }
 
-.card{
-  width: 100%;
-  background: var(--paper);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  border: var(--border);
-  padding: 34px 46px;
+/* centered container */
+.wrap{
+  width:100%;
+  max-width:950px;
+  display:flex;
+  justify-content:center;
 }
 
-/* ====== HEADER ====== */
+/* resume card */
+.card{
+  width:100%;
+  background: var(--paper);
+  border: 5px solid var(--olive);
+  padding:40px 50px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+/* ===== HEADER ===== */
 .header{
   text-align:center;
-  border-bottom: 3px solid var(--olive-700);
-  padding-bottom: 14px;
-  margin-bottom: 18px;
+  border-bottom: 3px solid var(--olive);
+  padding-bottom:12px;
+  margin-bottom:20px;
 }
 
 .name{
-  font-family: "Times New Roman", Times, serif;
-  color: var(--olive-900);
-  margin: 0;
-  font-size: 34px;
-  letter-spacing: 1px;
+  font-size:34px;
+  margin:0;
+  color: var(--olive);
+  letter-spacing:1px;
 }
 
 .contact{
-  margin-top: 10px;
-  display:flex;
-  justify-content:center;
-  flex-wrap:wrap;
-  gap: 10px;
-  font-size: 14px;
+  margin-top:8px;
+  font-size:15px;
 }
 
-.dot{ opacity:.7; }
+.contact a{
+  color: var(--olive);
+  text-decoration:none;
+}
 
-/* ====== SECTIONS ====== */
-.section{ margin-top: 18px; }
+.contact a:hover{
+  text-decoration:underline;
+}
+
+.dot{ margin:0 6px; }
+
+/* ===== SECTIONS ===== */
+.section{
+  margin-top:18px;
+}
 
 .section h2{
-  font-family: "Times New Roman", Times, serif;
-  color: var(--olive-900);
-  border-left: 7px solid var(--olive-700);
-  padding-left: 12px;
-  margin: 0 0 10px;
-  font-size: 20px;
-  letter-spacing: .4px;
+  color: var(--olive);
+  font-size:20px;
+  border-left:6px solid var(--olive);
+  padding-left:10px;
+  margin-bottom:8px;
 }
 
 .section h3{
-  font-family: "Times New Roman", Times, serif;
-  color: var(--olive-900);
-  margin: 0;
-  font-size: 17px;
+  color: var(--olive);
+  font-size:17px;
+  margin:0;
 }
 
-p{ margin: 8px 0; color: var(--ink); }
-.muted{ color: var(--muted); }
+p{
+  margin:8px 0;
+}
 
-ul{ margin: 8px 0 0; padding-left: 18px; }
-li{ margin: 6px 0; }
-
-.compact li{ margin: 4px 0; }
-
-/* ====== JOBS ====== */
-.job{ margin-top: 12px; }
+/* ===== JOB ===== */
+.job{
+  margin-top:12px;
+}
 
 .job__top{
   display:flex;
   justify-content:space-between;
   align-items:flex-start;
-  gap: 10px;
+  gap:10px;
 }
 
 .pill{
-  font-size: 13px;
-  color: var(--olive-900);
-  background: var(--olive-200);
-  border: 1px solid var(--olive-200);
-  padding: 6px 10px;
-  border-radius: 999px;
-  white-space: nowrap;
+  font-size:13px;
+  border:1px solid var(--olive);
+  padding:4px 10px;
+  border-radius:20px;
+  color: var(--olive);
 }
 
-/* ====== SKILLS ====== */
+/* ===== LISTS ===== */
+ul{
+  margin-top:6px;
+  padding-left:18px;
+}
+
+li{
+  margin:6px 0;
+}
+
+/* divider */
+.divider{
+  height:1px;
+  background: rgba(85,107,47,0.3);
+  margin:14px 0;
+}
+
+/* skills box */
 .skillgrid{
   display:flex;
   flex-direction:column;
-  gap: 10px;
+  gap:10px;
 }
 
 .skillrow{
-  padding: 10px 12px;
-  border: 1px dashed var(--olive-200);
-  border-radius: 12px;
-  background: rgba(255,255,255,.22);
-}
-
-:root[data-theme="dark"] .skillrow{
-  background: rgba(0,0,0,.12);
+  border:1px dashed rgba(85,107,47,0.4);
+  padding:10px 12px;
 }
 
 .k{
-  font-family: "Times New Roman", Times, serif;
-  color: var(--olive-900);
-  font-weight: 700;
-  margin-bottom: 4px;
+  color: var(--olive);
+  font-weight:bold;
+  margin-bottom:3px;
 }
 
-.v{
-  color: var(--ink);
+/* ===== RESPONSIVE ===== */
+@media (max-width:700px){
+  .card{
+    padding:25px;
+  }
+  .job__top{
+    flex-direction:column;
+  }
 }
 
-/* ====== DIVIDER / FOOTER ====== */
-.divider{
-  height: 1px;
-  margin: 14px 0;
-  background: linear-gradient(90deg, transparent, var(--olive-200), transparent);
-}
-
-.footer{
-  margin-top: 22px;
-  text-align:center;
-  font-size: 12px;
-  color: var(--muted);
-}
-
-/* ====== RESPONSIVE ====== */
-@media (max-width: 720px){
-  body{ padding-top: 118px; }
-  .card{ padding: 26px 20px; }
-  .job__top{ flex-direction:column; }
-  .pill{ white-space: normal; }
-}
-
-/* ====== PRINT ====== */
+/* ===== PRINT ===== */
 @media print{
-  .topbar{ display:none !important; }
-  body{ background:#fff; padding:0; }
-  .card{ box-shadow:none; border:none; padding:0; }
+  body{
+    background:white;
+    padding:0;
+  }
+  .card{
+    border:none;
+    box-shadow:none;
+    padding:0;
+  }
 }
